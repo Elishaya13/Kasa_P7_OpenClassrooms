@@ -13,8 +13,8 @@ const Header = () => {
                 </div>
                 <nav>
                     <ul>
-                        <li><Link to='/home'>Acceuil</Link></li>
-                        <li><Link to='/about'>A propos</Link></li>
+                        <li><Link to='/home' style={{ textDecoration: 'none', color: '#FF6060' }}>ACCUEIL</Link></li>
+                        <li><Link to='/about' style={{ textDecoration: 'none', color: '#FF6060' }}>A PROPOS</Link></li>
                     </ul>
                 </nav>
             </header>

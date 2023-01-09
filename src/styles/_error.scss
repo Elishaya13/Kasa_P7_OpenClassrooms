@@ -1,3 +1,4 @@
+$primary-color : #FF6060;
 .error_container {
     font-family: "Montserra";
     
@@ -6,11 +7,11 @@
 
     &_message {
     
-        color: red;
+        color: $primary-color;
         list-style: none;
         
         &_number {
-            color: red;
+            color: $primary-color;
             font-size: 96px;
         }
    
