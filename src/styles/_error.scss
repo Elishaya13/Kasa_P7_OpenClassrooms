@@ -1,0 +1,18 @@
+.error_container {
+    font-family: "Montserra";
+    
+    display: flex;
+    flex-direction: column;
+
+    &_message {
+    
+        color: red;
+        list-style: none;
+        
+        &_number {
+            color: red;
+            font-size: 96px;
+        }
+   
+}
+}
