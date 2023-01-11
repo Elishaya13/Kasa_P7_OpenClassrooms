@@ -11,7 +11,7 @@ const Error = () => {
             <Header />
             <p className="error_container_message_number">404</p>
             <p className="error_container_message">Oups! la page que vous demandez n'existe pas.</p>
-            <p className="error_container_message"><Link to="/home" style={{ color: 'inherit' }}>Retourner sur la page d'accueil</Link></p>
+            <p className="error_container_message"><Link to="/home" >Retourner sur la page d'accueil</Link></p>
             <Footer />
         </div>
     );

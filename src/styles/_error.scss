@@ -1,18 +1,24 @@
-$primary-color : #FF6060;
+
+
 .error_container {
-    font-family: "Montserra";
+
     
     display: flex;
+    
     flex-direction: column;
 
     &_message {
     
-        color: $primary-color;
+       
         list-style: none;
+        a {
+            text-decoration: underline;
+        }
         
         &_number {
-            color: $primary-color;
-            font-size: 96px;
+           
+            font-size: 6rem;
+            font-weight: 700;
         }
    
 }
