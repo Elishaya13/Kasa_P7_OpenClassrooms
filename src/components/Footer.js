@@ -10,9 +10,6 @@ const Footer = () => {
         <div className='Footer'>
             <img src={BLACK_LOGO} alt="black logo"></img>
             <p>© 2023 Kasa. All rights reserved</p>
-
-
-
         </div>
     );
 };

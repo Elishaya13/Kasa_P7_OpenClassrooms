@@ -1,25 +1,30 @@
 
 
 .error_container {
-
-    
     display: flex;
-    
     flex-direction: column;
+    align-items: center;
+
+    margin-top: 215px ;
 
     &_message {
-    
+        text-align: center;
        
-        list-style: none;
-        a {
-            text-decoration: underline;
-        }
+       
         
         &_number {
            
             font-size: 6rem;
             font-weight: 700;
+            margin: 0 0 11px 0;
         }
+        &_back {
+            margin: 133px 0 235px 0  ;
+            a {
+                text-decoration: underline;
+            }
+        }
+       
    
 }
 }

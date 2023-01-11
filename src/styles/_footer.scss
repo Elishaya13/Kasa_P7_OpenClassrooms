@@ -1,8 +1,26 @@
 .Footer {
-    
+    width: 375px;
+    height: 209px;
     background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 122px;
+        height: 40px;
+        
+    }
     p {
         color: white;
+        
+        font-size: 12px;
+        font-weight: 500;
+        padding-top: 34px
+       
+
+       
     }
 }
 

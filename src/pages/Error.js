@@ -7,13 +7,20 @@ import Header from '../components/Header';
 
 const Error = () => {
     return (
-        <div className='error_container'>
+        <>
             <Header />
-            <p className="error_container_message_number">404</p>
-            <p className="error_container_message">Oups! la page que vous demandez n'existe pas.</p>
-            <p className="error_container_message"><Link to="/home" >Retourner sur la page d'accueil</Link></p>
+
+            <div className='error_container'>
+
+                <p className="error_container_message_number">404</p>
+                <p className="error_container_message">Oups! la page que<br /> vous demandez n'existe pas.</p>
+                <p className="error_container_message_back"><Link to="/home" >Retourner sur la page d'accueil</Link></p>
+
+
+
+            </div>
             <Footer />
-        </div>
+        </>
     );
 };
 
