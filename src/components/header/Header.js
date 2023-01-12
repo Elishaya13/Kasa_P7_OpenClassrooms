@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import RED_LOGO from '../assets/images/redLogo.png'
+import RED_LOGO from '../../assets/images/redLogo.png'
 import { useLocation } from 'react-router-dom';
+import './header.scss'
 
 
 const Header = () => {

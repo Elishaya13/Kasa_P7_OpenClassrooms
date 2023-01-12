@@ -1,6 +1,6 @@
 import React from 'react';
-
-import BLACK_LOGO from '../assets/images/blackLogo.png';
+import './footer.scss'
+import BLACK_LOGO from '../../assets/images/blackLogo.png';
 
 
 
