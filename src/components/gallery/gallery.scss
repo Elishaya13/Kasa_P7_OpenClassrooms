@@ -1,12 +1,33 @@
+@import '../../styles/mixins';
+
 .Gallery {
-    position: relative;
     width: 375px;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin: auto;
+    margin-top: 43px;
    
-    gap: 20px;
-   margin: 10px 0 40px 0;
+    @include mediumMinBreakPoins {
+        width: 1240px;
+    }
+
+    &__content {
+        position: relative;
+        width: 375px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin: 10px 0 40px 0;
+    
+        @include mediumMinBreakPoins {
+            width: 1240px;
+            gap: 60px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+           
+        }
+
+    }
 
 }

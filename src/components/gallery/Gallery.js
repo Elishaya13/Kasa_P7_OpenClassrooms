@@ -5,14 +5,15 @@ import './gallery.scss'
 
 const Gallery = () => {
     return (
-
         <div className='Gallery'>
-            {apartments.map(apart => (
-                <Card key={apart.id}
-                    {...apart}
-                />
-            ))}
+            <div className='Gallery__content'>
+                {apartments.map(apart => (
+                    <Card key={apart.id}
+                        {...apart}
+                    />
+                ))}
 
+            </div>
         </div>
     );
 };
