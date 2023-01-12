@@ -1,5 +1,8 @@
+@import '../../styles/mixins';
+
 
 .Header {
+       
     header {
         
         display: flex;
@@ -8,6 +11,13 @@
         width: 335px;
         height: 47px;
         margin: 20px 0 17px 20px;
+
+        @include mediumMinBreakPoins {
+            margin: auto;
+            width: 1240px;
+            margin-top: 40px;
+            margin-bottom: 63px;
+        }
         
         img {
             width: 145px;
@@ -18,9 +28,19 @@
             display: flex;  
             gap: 10px;
 
+            @include mediumMinBreakPoins {
+                gap: 34px;
+            }
+
+           
+
             li {
-                font-size: 0.75rem;
+                font-size: 12px;
                 font-weight: 500;
+
+                @include mediumMinBreakPoins {
+                    font-size: 24px;
+                }
             
             }  
         }    

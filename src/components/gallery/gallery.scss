@@ -1,11 +1,14 @@
 @import '../../styles/mixins';
+@import '../../styles/variables';
 
 .Gallery {
     width: 375px;
     margin: auto;
-    margin-top: 43px;
+   
+    border-radius: $border-radius-md;
    
     @include mediumMinBreakPoins {
+        background-color: $tertiary-color;
         width: 1240px;
     }
 
@@ -25,6 +28,10 @@
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: center;
+            padding-top: 56px;
+            padding-bottom: 56px;
+            margin-top: 43px;
+
            
         }
 

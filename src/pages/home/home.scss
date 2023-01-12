@@ -1,3 +1,11 @@
+@import '../../styles/mixins';
+
 .Home {
    max-width: 375px;
+   margin: auto;
+
+   @include mediumMinBreakPoins {
+    max-width: 1440px;
+   }
+
 }
