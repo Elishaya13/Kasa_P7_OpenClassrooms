@@ -7,15 +7,12 @@ import Header from '../../components/header/Header';
 
 const Home = () => {
     return (
-        <>
+        <div className='Home'>
             <Header />
-            <div className='Home'>
-                <Banner />
-                <Gallery />
-
-            </div>
+            <Banner />
+            <Gallery />
             <Footer />
-        </>
+        </div>
 
     );
 };

@@ -6,7 +6,7 @@ const Banner = () => {
     return (
         <div className='Banner'>
             <img src={BANNER_M} alt='banner'></img>
-            <p> Chez vous, <br />partout et ailleurs</p>
+            <h1> Chez vous, <br />partout et ailleurs</h1>
 
         </div>
     );

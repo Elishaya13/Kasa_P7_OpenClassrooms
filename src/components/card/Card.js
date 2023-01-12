@@ -11,7 +11,10 @@ const Card = ({ id, cover, title }) => {
                 src={cover}
                 alt={'Photo of ' + title} />
 
-            <p>{title}</p>
+            <h2 className='Card__title'>{title}</h2>
+
+
+
 
         </Link>
     );
