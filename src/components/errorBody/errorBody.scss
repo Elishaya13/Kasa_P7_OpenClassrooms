@@ -1,0 +1,75 @@
+
+@import '../../styles/mixins';
+
+.error_container__body{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+
+    &__message {
+        text-align: center;
+
+        &_number {
+           
+            font-size: 96px;
+            font-weight: 700;
+            margin: 215px 0 11px 0;
+    
+            @include mediumMinBreakPoins {
+                font-size: 288px ;
+            }
+    
+            
+        }
+        &_back {
+            margin: 133px 0 235px 0  ;
+    
+            a {
+                text-decoration: underline;
+            }
+        }
+        &_oups {
+            text-align: center;
+            @include mediumMinBreakPoins {
+                br {
+                    display: none;
+                }
+            }
+        }
+
+    
+
+    }
+
+   
+}
+
+
+// .error_container {
+
+//     width: 375px;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+
+//     &__message {
+//         text-align: center;
+   
+   
+    
+//     &_number {
+       
+//         font-size: 6rem;
+//         font-weight: 700;
+//         margin: 215px 0 11px 0;
+//     }
+//     &_back {
+//         margin: 133px 0 235px 0  ;
+//         a {
+//             text-decoration: underline;
+//         }
+//     }
+
+
+
+// }

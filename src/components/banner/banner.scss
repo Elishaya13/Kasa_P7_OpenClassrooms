@@ -24,7 +24,17 @@
     }
     h1 {
         position: absolute;
-        color:$secondary-color
+        color:$secondary-color;
+
+         br {
+
+            @include mediumMinBreakPoins {
+                display: none;
+            }
+
+        }
+
+       
     }
  
 }
