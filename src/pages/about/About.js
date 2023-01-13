@@ -2,12 +2,16 @@ import React from 'react';
 import Banner from '../../components/banner/Banner';
 import Footer from '../../components/footer/Footer';
 import Header from '../../components/header/Header';
+import BANNER_ABOUT from '../../assets/images/banner_about.png'
+import AboutBody from '../../components/aboutBody/AboutBody';
+import './about.scss'
 
-const About = (banner, text) => {
+const About = () => {
     return (
-        <div>
+        <div className='About'>
             <Header />
-            <Banner src={banner} />
+            <Banner banner={BANNER_ABOUT} />
+            <AboutBody />
             <Footer />
         </div>
     );

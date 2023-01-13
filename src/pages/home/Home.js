@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Banner from '../../components/banner/Banner';
 import Gallery from '../../components/gallery/Gallery';
 import Footer from '../../components/footer/Footer';
@@ -8,12 +8,20 @@ import './home.scss';
 
 
 const Home = () => {
-    const title = ["Chez vous,", <br />, " partout et ailleurs"]
+    const title = {
+        lines: ["Chez vous,", " partout et ailleurs"]
+    };
+
 
     return (
         <div className='Home'>
             <Header />
-            <Banner banner={BANNER_M} text={title} />
+            <Banner banner={BANNER_M} text={title.lines.map((line, i) =>
+                <Fragment key={i}>
+                    {i > 0 && <br />}
+                    {line}
+                </Fragment>
+            )} />
             <Gallery />
             <Footer />
         </div>

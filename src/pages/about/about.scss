@@ -1,0 +1,16 @@
+@import '../../styles/mixins';
+
+.About {
+   max-width: 375px;
+   margin: auto;
+
+   @include mediumMinBreakPoins {
+    max-width: 1440px;
+   }
+
+   img {
+    height: 223px;
+   }
+   
+
+}

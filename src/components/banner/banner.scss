@@ -23,12 +23,15 @@
 
     }
     h1 {
+
         position: absolute;
         color:$secondary-color;
-        margin-right: 20%;
+        left: 10%;
+        
 
         @include mediumMinBreakPoins {
             margin: auto;
+            padding: 0;
         }
        
 
