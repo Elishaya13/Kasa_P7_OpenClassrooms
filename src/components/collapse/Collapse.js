@@ -1,32 +1,39 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import './collapse.scss'
 
 
 
-const Collapse = ({ title, arrow }) => {
+const Collapse = ({ title, arrow, text }) => {
 
     const [open, setOpen] = useState(false);
 
-    useEffect(() => {
-        //code pour reduire ou fermer
+    // useEffect(() => {
+    //     console.log("je suis " + open)
 
-    }, [open])
+    // }, [open])
 
+    const handleClick = () => {
+        setOpen(!open)
+
+    }
 
     return (
 
         <div className='Collapse'>
-            <button className='Collapse__button' onClick={() => { setOpen(!open) }}>{title}</button>
-            <img src={arrow} alt='fleche'></img>
-        </div>
+            <div className='Collapse__container' onClick={handleClick}>
+                <h3>{title}</h3>
+                <img src={arrow} alt='fleche' className={open ? "arrow-up" : "arrow-down"}></img>
+            </div>
 
+            <div className='Collapse__textContent'>
+                {open && <div className='Collapse__textContent_text'>
+                    <p>{text}</p>
+                </div>}
+            </div>
 
-        // <div className='Collapse'>
-        //     <p>{title}</p>
-        //     <img src={arrow} alt='fleche'></img>
+        </div >
 
-        // </div>
     );
 };
 

@@ -1,5 +1,4 @@
-
-function api() {
+const api = () => {
     const getAparts = async () => {
         return fetch("/datas/logements.json", {
             type: "GET",
