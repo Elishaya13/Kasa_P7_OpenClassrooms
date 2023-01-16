@@ -1,9 +1,9 @@
 import React from 'react';
 
 import { Link } from 'react-router-dom';
-import './errorBody.scss'
+import './notFoundBody.scss'
 
-const ErrorBody = () => {
+const NotFoundBody = () => {
     return (
         <div className='error_container__body'>
             <p className="error_container__body__message_number">404</p>
@@ -14,4 +14,4 @@ const ErrorBody = () => {
     );
 };
 
-export default ErrorBody;
+export default NotFoundBody;

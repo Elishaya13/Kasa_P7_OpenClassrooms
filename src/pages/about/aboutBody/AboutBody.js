@@ -1,7 +1,7 @@
 import React from 'react';
-import Collapse from '../collapse/Collapse';
+import Collapse from '../../../components/collapse/Collapse';
 import './aboutBody.scss'
-import arrow_close from '../../assets/images/arrow_down.svg'
+import arrow_close from '../../../assets/images/arrow_down.svg'
 
 
 

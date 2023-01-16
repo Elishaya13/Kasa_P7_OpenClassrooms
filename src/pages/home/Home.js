@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import Banner from '../../components/banner/Banner';
-import Gallery from '../../components/gallery/Gallery';
+import Gallery from './gallery/Gallery';
 import Footer from '../../components/footer/Footer';
 import Header from '../../components/header/Header';
 import BANNER_M from '../../assets/images/banner_m.png'

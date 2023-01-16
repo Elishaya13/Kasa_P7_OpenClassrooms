@@ -1,6 +1,6 @@
 import React from 'react';
-import Card from '../card/Card';
-import apartments from '../../datas/logements.json';
+import Card from '../../../components/card/Card';
+import apartments from '../../../datas/logements.json';
 import './gallery.scss'
 
 const Gallery = () => {

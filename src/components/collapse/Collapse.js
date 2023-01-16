@@ -1,17 +1,23 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './collapse.scss'
-//import arrow_close from '../../assets/images/arrow_down.svg'
+
 
 
 const Collapse = ({ title, arrow }) => {
-    //const [open, setopen] = useState(false);
+
+    const [open, setOpen] = useState(false);
+
+    useEffect(() => {
+        //code pour reduire ou fermer
+
+    }, [open])
 
 
     return (
 
         <div className='Collapse'>
-            <button className='Collapse__button'>{title}</button>
+            <button className='Collapse__button' onClick={() => { setOpen(!open) }}>{title}</button>
             <img src={arrow} alt='fleche'></img>
         </div>
 
@@ -25,23 +31,3 @@ const Collapse = ({ title, arrow }) => {
 };
 
 export default Collapse;
-
-// function ButtonCollapse({ arrowToggle, title }) {
-//     return (
-//         <div className='Collapse'>
-//             <Button onClick={arrowToggle}>
-//                 {title}
-//             </Button>
-//             {/* <img src={arrow} alt='fleche'></img> */}
-
-//         </div>
-//     );
-// }
-
-// function Button({ onClick, children }) {
-//     return (
-//         <button onClick={onClick}>
-//             {children}
-//         </button>
-//     )
-// }
