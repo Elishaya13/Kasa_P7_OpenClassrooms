@@ -1,43 +1,49 @@
 import React, { useState, useEffect } from 'react';
 import './apart.scss'
 import { useParams } from 'react-router-dom';
-import apiAllAparts from '../../services/apiAllAparts';
-import Banner from '../../components/banner/Banner';
-
-
+import apiAparts from '../../services/apiAparts';
+import Slideshow from '../../components/slideshow/Slideshow';
+//import Banner from '../../components/banner/Banner';
+import ApartBody from './apartBody/ApartBody';
 
 const Apart = () => {
 
-    const [aparts, setAparts] = useState([]);
-    const [isMounted, setIsMounted] = useState(false)
-
     let { apartId } = useParams()
+
+    const [apart, setApart] = useState({});
+    const [isMounted, setIsMounted] = useState(false);
 
     useEffect(() => {
         !isMounted &&
-            apiAllAparts.getAparts().then((json) => {
-                setAparts(json);
-                setIsMounted(true);
-            });
+            apiAparts.getApart(apartId)
+                .then((json) => {
+                    setApart(json);
+                    setIsMounted(true);
+                }).catch(setApart({}));
+
     }, [isMounted]);
 
-    const currentApart = aparts.filter(apart =>
-        apart.id === apartId);
-
-
-
     return (
+
+
         <div className='Apart'>
-            <div>
-                {currentApart.map(apart => (
 
-                    <Banner key={apart.id} banner={apart.cover} />
+            <div className='Appart__slideshow'>
 
-                ))}
-                <p>{currentApart.title}</p>
+                {isMounted && <Slideshow pictures={apart.pictures} alt={apart.description} />}
+                {/* <Slideshow pictures={apart.pictures} alt={apart.description} /> */}
 
             </div>
+            <div className='Appart__body__container'>
+                {/* 
+                {apart.map(apart => (
 
+                    <ApartBody key={apart.id} apartName={apart.title} />
+
+
+                ))} */}
+
+            </div>
 
         </div>
 

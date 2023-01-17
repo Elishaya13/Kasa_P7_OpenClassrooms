@@ -1,0 +1,31 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.Slideshow {
+    position: relative;
+    width: 375px;
+    text-align: center;
+    display: block;
+
+    img {
+        width: 335px;
+        border-radius: 10px;
+        
+    }
+
+    .arrow_back , .arrow_forward{
+        width: 19px;
+        height: 19px;
+        position: absolute;
+        top: 50%;
+        
+        
+    }
+    .arrow_back {
+       left: 8%
+
+    }
+    .arrow_forward {
+        right: 8%;
+    }
+}
