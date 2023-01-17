@@ -14,6 +14,7 @@ const PublicRouter = () => {
             <Route index element={<Home />} />
             <Route path='/home' element={<Home />} />
             <Route path='/about' element={<About />} />
+            <Route path='/apart:idApart' element={<About />} />
             <Route path='*' element={<NotFound />} />
         </Routes>
 
