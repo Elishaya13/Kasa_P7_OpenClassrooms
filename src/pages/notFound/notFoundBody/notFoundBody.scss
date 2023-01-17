@@ -2,11 +2,13 @@
 @import '../../../styles/mixins';
 
 .error_container__body{
+    
     display: flex;
     flex-direction:column;
     align-items: center;
 
     &__message {
+
         text-align: center;
 
         &_number {
@@ -15,29 +17,43 @@
             font-weight: 700;
             margin: 215px 0 11px 0;
     
-            @include mediumMinBreakPoins {
-                font-size: 288px ;
-            }
-    
-            
         }
+
         &_back {
+
             margin: 133px 0 235px 0  ;
-    
+            font-weight: 500;
+            font-size: 14px;
+            
             a {
                 text-decoration: underline;
-            }
+            }     
         }
+
         &_oups {
+
             text-align: center;
-            @include mediumMinBreakPoins {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        @include mediumMinBreakPoins {
+
+            &_number {
+                font-size: 288px ;
+            }
+
+            &_back {
+                font-size: 18px ;
+            }
+
+            &_oups {
+                font-size: 36px;
                 br {
                     display: none;
                 }
             }
         }
-
-    
 
     }
 

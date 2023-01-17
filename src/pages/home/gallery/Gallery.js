@@ -7,6 +7,7 @@ const Gallery = () => {
     const [aparts, setAparts] = useState([]);
     const [isMounted, setIsMounted] = useState(false)
 
+
     useEffect(() => {
         !isMounted &&
             api.getAparts().then((json) => {
@@ -14,6 +15,8 @@ const Gallery = () => {
                 setIsMounted(true);
             });
     }, [isMounted]);
+
+
 
     return (
         <div className='Gallery'>

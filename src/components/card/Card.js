@@ -2,8 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import "./card.scss"
 
-
-
 const Card = ({ id, cover, title }) => {
     return (
         <Link className='Card' to={'../logements/' + id} >
@@ -12,15 +10,8 @@ const Card = ({ id, cover, title }) => {
                 alt={'Photo of ' + title} />
 
             <h2 className='Card__title'>{title}</h2>
-
-
-
-
         </Link>
     );
 };
 
 export default Card;
-
-// Compostant card
-// id + title + cover from logement
