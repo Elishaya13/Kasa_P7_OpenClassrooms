@@ -3,8 +3,6 @@ import './footer.scss'
 import BLACK_LOGO from '../../assets/images/blackLogo.png';
 
 
-
-
 const Footer = () => {
     return (
         <div className='Footer'>
