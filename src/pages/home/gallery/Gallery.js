@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Card from '../../../components/card/Card';
-import api from '../../../services/api'
+import apiAllAparts from '../../../services/apiAllAparts'
 import './gallery.scss'
 
 const Gallery = () => {
@@ -10,7 +10,8 @@ const Gallery = () => {
 
     useEffect(() => {
         !isMounted &&
-            api.getAparts().then((json) => {
+
+            apiAllAparts.getAparts().then((json) => {
                 setAparts(json);
                 setIsMounted(true);
             });

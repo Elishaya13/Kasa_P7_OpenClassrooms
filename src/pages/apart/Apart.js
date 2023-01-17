@@ -1,14 +1,43 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import './apart.scss'
+import { useParams } from 'react-router-dom';
+import apiAllAparts from '../../services/apiAllAparts';
 import Banner from '../../components/banner/Banner';
-//import Footer from '../../components/footer/Footer';
-//import Header from '../../components/header/Header';
-import BANNER_APART from '../../assets/images/banner_apart'
+
+
 
 const Apart = () => {
+
+    const [aparts, setAparts] = useState([]);
+    const [isMounted, setIsMounted] = useState(false)
+
+    let { apartId } = useParams()
+
+    useEffect(() => {
+        !isMounted &&
+            apiAllAparts.getAparts().then((json) => {
+                setAparts(json);
+                setIsMounted(true);
+            });
+    }, [isMounted]);
+
+    const currentApart = aparts.filter(apart =>
+        apart.id === apartId);
+
+
+
     return (
         <div className='Apart'>
+            <div>
+                {currentApart.map(apart => (
 
-            <Banner banner={BANNER_APART} />
+                    <Banner key={apart.id} banner={apart.cover} />
+
+                ))}
+                <p>{currentApart.title}</p>
+
+            </div>
+
 
         </div>
 
@@ -16,3 +45,4 @@ const Apart = () => {
 };
 
 export default Apart;
+

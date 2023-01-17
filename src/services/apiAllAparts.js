@@ -1,4 +1,4 @@
-const api = () => {
+const apiAparts = () => {
     const getAparts = async () => {
         return fetch("/datas/logements.json", {
             type: "GET",
@@ -9,6 +9,6 @@ const api = () => {
         getAparts,
     };
 }
+export default apiAparts();
 
-export default api();
 

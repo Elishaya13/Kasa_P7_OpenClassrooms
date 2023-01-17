@@ -1,0 +1,16 @@
+@import '../../styles/mixins';
+
+.Apart .Banner img {
+    
+
+    height: 223px;
+    object-fit: cover;
+
+    @include mediumMinBreakPoins {
+    
+        width: 1240px;
+        height: 415px;
+        object-fit: contain;
+
+    }
+}

@@ -4,6 +4,7 @@ import Home from '../pages/home/Home';
 import About from '../pages/about/About';
 import NotFound from '../pages/notFound/NotFound';
 import Layout from '../pages/Layout';
+import Apart from '../pages/apart/Apart';
 
 
 
@@ -16,7 +17,7 @@ const PublicRouter = () => {
 
                 <Route path='/home' element={<Home />} />
                 <Route path='/about' element={<About />} />
-                <Route path='/apart:idApart' element={<About />} />
+                <Route path='/logements/:apartId' element={<Apart />} />
 
                 <Route path='*' element={<NotFound />} />
             </Route>
