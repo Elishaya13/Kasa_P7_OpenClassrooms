@@ -1,16 +1,26 @@
 @import '../../styles/mixins';
 
-.Apart .Banner img {
+.Apart {
     
-
-    height: 223px;
-    object-fit: cover;
-
+    width: 375px;
+    
+    &__slideshow {
+        width: 375px;
+        display: flex;
+        justify-content: center;
+       
+    }
     @include mediumMinBreakPoins {
-    
+        position: relative;
         width: 1240px;
-        height: 415px;
-        object-fit: contain;
-
+        margin: auto;
+        margin-top: -3%;
+        
+        
+        &__slideshow {
+            width: 1240px;
+            height: 415px;
+        }
+        
     }
 }

@@ -3,8 +3,7 @@ import './apart.scss'
 import { useParams } from 'react-router-dom';
 import apiAparts from '../../services/apiAparts';
 import Slideshow from '../../components/slideshow/Slideshow';
-//import Banner from '../../components/banner/Banner';
-import ApartBody from './apartBody/ApartBody';
+import ApartProfil from './apartProfil/ApartProfil';
 
 const Apart = () => {
 
@@ -21,20 +20,20 @@ const Apart = () => {
                     setIsMounted(true);
                 }).catch(setApart({}));
 
-    }, [isMounted]);
+    }, [isMounted, apartId]);
 
     return (
 
 
         <div className='Apart'>
 
-            <div className='Appart__slideshow'>
+            <div className='Apart__slideshow'>
 
                 {isMounted && <Slideshow pictures={apart.pictures} alt={apart.description} />}
                 {/* <Slideshow pictures={apart.pictures} alt={apart.description} /> */}
 
             </div>
-            <div className='Appart__body__container'>
+            <div className='Apart__profil__container'>
                 {/* 
                 {apart.map(apart => (
 
@@ -42,6 +41,7 @@ const Apart = () => {
 
 
                 ))} */}
+                <ApartProfil />
 
             </div>
 

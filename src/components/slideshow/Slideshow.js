@@ -18,9 +18,10 @@ const Slideshow = ({ pictures, alt }) => {
 
     return (
         <div className='Slideshow'>
-            <img src={pictures[index]} alt={alt}></img>
-            {pictureNbr > 1 && <img className='arrow_back' src={ARROW_BACK}></img>}
-            {pictureNbr > 1 && <img className='arrow_forward' src={ARROW_FOREWARD}></img>}
+            {/* <img src={pictures[index]} alt={alt}></img> */}
+            <div className='Slideshow__arrows'> {pictureNbr > 1 && <img className='arrow_back' src={ARROW_BACK}></img>}
+                {pictureNbr > 1 && <img className='arrow_forward' src={ARROW_FOREWARD}></img>}</div>
+
             {<span>{index + 1}/{pictureNbr}</span>}
 
 
