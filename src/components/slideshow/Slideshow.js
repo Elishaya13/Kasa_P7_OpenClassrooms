@@ -6,11 +6,13 @@ import ARROW_FOREWARD from '../../assets/images/arrow_forward.png'
 const Slideshow = ({ pictures, alt }) => {
 
     const [currentIndex, setIndex] = useState(0)
+    // Je prend le dernier index de mon tableau
     const lastIndex = pictures.length - 1;
 
     const handleClickSlideLeft = () => {
         // Si je suis a index 0 , alors isFirstSlide = vrai , je suis sur la première slide
         const isFirstSlide = currentIndex === 0;
+
         // Si Je suis à la premiere slide, alors je vais à la dernière image de mon tableau , sinon je recule de 1
         const newIndex = isFirstSlide ? lastIndex : currentIndex - 1;
         setIndex(newIndex)
