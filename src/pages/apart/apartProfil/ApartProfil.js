@@ -5,7 +5,7 @@ const ApartProfil = ({ apartName, apartLocation, imageProfil, profileName }) => 
         <div>
             <h2>Nom appart{apartName}</h2>
             <p>Lieu {apartLocation}</p>
-            <img className='avatar' src={imageProfil} alt={profileName}></img>
+            {/* <img className='avatar' src={imageProfil} alt={profileName}></img> */}
         </div>
     );
 };

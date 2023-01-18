@@ -17,7 +17,8 @@ const Slideshow = ({ pictures, alt }) => {
     }
 
     return (
-        <div className='Slideshow'>
+        <div className='Slideshow' style={{ backgroundImage: `url("${pictures[index]}")` }}>
+
             {/* <img src={pictures[index]} alt={alt}></img> */}
             <div className='Slideshow__arrows'> {pictureNbr > 1 && <img className='arrow_back' src={ARROW_BACK}></img>}
                 {pictureNbr > 1 && <img className='arrow_forward' src={ARROW_FOREWARD}></img>}</div>

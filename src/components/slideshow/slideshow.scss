@@ -2,46 +2,24 @@
 @import '../../styles/variables';
 
 .Slideshow {
-    //position: relative;
     width: 335px;
     height: 255px;
-    //text-align: center;
     display: flex;
     flex-direction:column;
     justify-content: center;
-    background-color: red;
+    background-repeat: no-repeat;
+    background-size: cover;
     border-radius: $border-radius;
 
-    img {
-        width: 335px;
-        border-radius: 10px;
-        
-    }
-
     span {
-        display: none;
-
-        
+        display: none;  
     }
 
     .arrow_back , .arrow_forward{
         width: 30px;
         height: 30px;
-       // position: absolute;
-       // top: 50%;
-       
-       
-        
-        
     }
-    .arrow_back {
-      // left: 8%
-       
-
-    }
-    .arrow_forward {
-       // right: 8%;
-    }
+   
     &__arrows {
         display: flex;
         justify-content: space-between;
@@ -52,18 +30,17 @@
         width: 1240px;
         height: 415px;
         border-radius: $border-radius-md;
-
+        background-position-x: center;
+        background-position-y: center;      
 
         span {
             position: relative;
             display: block;
             text-align: center;
             color: $secondary-color;
-            bottom: - 35%;
+            bottom: - 30%;
             
         }
-        
-
             .arrow_back,.arrow_forward {
                 width: 70px;
                 height: 80px;
