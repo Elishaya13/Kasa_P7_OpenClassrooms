@@ -9,12 +9,14 @@ const apiAparts = () => {
 
     const getApart = async (apartId) => {
 
-        let aparts = await getAparts();
-        let apart = aparts.filter(apart =>
-            apart.id === apartId);
+        return new Promise((resolve, reject) => {
+            getAparts()
+                .then((res) => {
+                    resolve(res.find(apart =>
+                        apart.id === apartId))
+                }).catch(e => reject(e))
 
-        //  console.log(apart[0])
-        return apart[0];
+        })
 
     }
 

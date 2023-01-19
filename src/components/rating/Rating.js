@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
+import star from '../../assets/images/star.svg'
 
-const Rating = () => {
+const Rating = (rating) => {
+
+    const [star, setStar] = useState([])
     return (
         <div>
             rate stars !
