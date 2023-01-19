@@ -3,18 +3,28 @@
 
 
 .TagLocation {
-    width: 84px ;
+    width: auto;
     height: 18px;
     background-color:$primary-color ;
     border-radius: 5px;
+    margin-right: 10px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
     
     p {
         color: $secondary-color;
         font-size: 10px;
         font-weight: 500;
+        margin: 0.2rem 1rem 0 1rem;
+     
+       
+    }
+
+    @include mediumMinBreakPoins {
+
+        height: 25px;
+        border-radius: $border-radius;
+        p {
+            font-size:14px
+        }
     }
 }
