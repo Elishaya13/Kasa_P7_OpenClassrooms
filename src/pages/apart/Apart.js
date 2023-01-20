@@ -42,30 +42,33 @@ const Apart = () => {
 
 
                 </div>
+                <div className='Apart__profil'>
+                    <div className='Apart__profil__name'>
+                        <div className='Apart__profil__name__title'>
+                            <h2>{apart.title}</h2>
+                            <p>{apart.location}</p>
+                        </div>
 
-                <div className='Apart__name'>
-                    <div className='Apart__name__title'>
-                        <h2>{apart.title}</h2>
-                        <p>{apart.location}</p>
+                        <div className='Apart__profil__name__tags'>
+                            {apart.tags.map((item, index) =>
+                                (<TagLocation key={index} tags={item} />))
+                            }
+                        </div>
+                    </div>
+                    <div className='Apart__host'>
+                        <Rating />
+
+                        <div className='Apart__host__profil'>
+                            <p>{apart.host["name"]} </p>
+                            <img src={apart.host["picture"]} alt={"proprietaire"}></img>
+                        </div>
+
                     </div>
 
-                    <div className='Apart__name__tags'>
-                        {apart.tags.map((item, index) =>
-                            (<TagLocation key={index} tags={item} />))
-                        }
-                    </div>
+
+
                 </div>
-
-                <div className='Apart__host'>
-                    <Rating />
-
-                    <div className='Apart__host__profil'>
-                        <p>{apart.host["name"]} </p>
-                        <img src={apart.host["picture"]} alt={"proprietaire"}></img>
-                    </div>
-
-                </div>
-                <div className='Apart__collaspe'>
+                <div className='Apart__collapse'>
                     <Collapse title="Description" arrow={arrow_close} text={apart.description} />
 
 
@@ -73,6 +76,8 @@ const Apart = () => {
 
 
                 </div>
+
+
 
             </div>
 

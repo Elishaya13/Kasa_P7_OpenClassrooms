@@ -13,6 +13,11 @@ h1 {
 
 h2 {
     font-size: 18px;
+    font-weight: 500;
+
+    @include mediumMinBreakPoins {
+        font-size: 36px;
+    }
 }
 
 h3 {
@@ -26,5 +31,5 @@ h3 {
 }
 p {
     
-    font-weight: 400;
+    font-weight: 500;
 }

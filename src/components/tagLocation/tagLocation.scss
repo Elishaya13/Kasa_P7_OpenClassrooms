@@ -3,19 +3,21 @@
 
 
 .TagLocation {
-    width: auto;
-    height: 18px;
     background-color:$primary-color ;
+    width: auto;
+    
+    height: 18px;
     border-radius: 5px;
     margin-right: 10px;
+
 
     
     p {
         color: $secondary-color;
         font-size: 10px;
-        font-weight: 500;
-        margin: 0.2rem 1rem 0 1rem;
-     
+        text-align: center;
+        line-height: 18px;
+        padding: 0 10px 0 10px;
        
     }
 
@@ -23,8 +25,10 @@
 
         height: 25px;
         border-radius: $border-radius;
+        
         p {
-            font-size:14px
+            font-size:14px;
+            line-height: 25px;
         }
     }
 }
