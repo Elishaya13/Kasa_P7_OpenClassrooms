@@ -56,7 +56,8 @@ const Apart = () => {
                         </div>
                     </div>
                     <div className='Apart__host'>
-                        <Rating />
+                        <Rating rating={apart.rating} />
+                        {/* {console.log(apart.rating)} */}
 
                         <div className='Apart__host__profil'>
                             <p>{apart.host["name"]} </p>
