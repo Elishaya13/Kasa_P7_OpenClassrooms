@@ -17,7 +17,8 @@ const PublicRouter = () => {
 
                 <Route path='/home' element={<Home />} />
                 <Route path='/about' element={<About />} />
-                <Route path='/logements/:apartId' element={<Apart />} />
+                <Route path='/logements/:apartId' element={<Apart />}
+                />
 
                 <Route path='*' element={<NotFound />} />
             </Route>

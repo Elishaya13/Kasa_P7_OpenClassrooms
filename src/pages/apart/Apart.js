@@ -65,14 +65,9 @@ const Apart = () => {
                         </div>
 
                     </div>
-
-
-
                 </div>
                 <div className='Apart__collapse'>
                     <Collapse title="Description" arrow={arrow_close} text={apart.description} />
-
-
                     <Collapse title="Équipement" arrow={arrow_close} text={apart.equipments.map((equipement, index) => <li key={index}>{equipement}</li>)} />
 
 
@@ -86,7 +81,7 @@ const Apart = () => {
         );
     } else {
         return (
-            <div> Truc qui tourne</div>
+            <div> LOADER loader loader</div>
         )
 
 
