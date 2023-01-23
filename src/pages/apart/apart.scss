@@ -1,4 +1,5 @@
 @import '../../styles/mixins';
+@import '../../styles/variables';
 
 .Apart {
 
@@ -89,6 +90,23 @@
         gap: 20px;
     }
 
+    &__loader {
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+        
+        &:after {
+            content: " ";
+            display: block;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            border: 6px solid #fff;
+            border-color: $primary-color transparent $primary-color transparent;
+            animation: loader-ring 1.2s linear infinite;
+        }
+    }
+
     @include mediumMinBreakPoins {
         position: relative;
         width: 1240px;
@@ -167,3 +185,11 @@
         }
     }
 }
+@keyframes loader-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }

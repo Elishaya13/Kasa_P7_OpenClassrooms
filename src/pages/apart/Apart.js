@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Navigate } from 'react-router-dom';
 import apiAparts from '../../services/apiAparts';
 
 import './apart.scss'
@@ -8,14 +8,16 @@ import Slideshow from '../../components/slideshow/Slideshow';
 import TagLocation from '../../components/tagLocation/TagLocation';
 import Rating from '../../components/rating/Rating';
 import Collapse from '../../components/collapse/Collapse';
+import NotFound from '../notFound/NotFound';
 
 
 const Apart = () => {
 
-    const { apartId } = useParams()
-
+    const { apartId } = useParams();
     const [apart, setApart] = useState(null);
-    // const [apart, setapart] = useState(false);
+
+
+
 
     useEffect(() => {
 
@@ -23,24 +25,22 @@ const Apart = () => {
             .then((json) => {
                 setApart(json);
 
-            }).catch(e => console.log(e));
+            })
+            .catch(e => console.log(e));
 
     }, [apartId]);
 
 
 
+    // Construit la vue seulement si les valeurs ont été récuperées et initialisées dans "apart"
     if (apart) {
 
         return (
-
-
             <div className='Apart'>
 
                 <div className='Apart__slideshow'>
 
                     <Slideshow pictures={apart.pictures} alt={apart.description} />
-
-
                 </div>
                 <div className='Apart__profil'>
                     <div className='Apart__profil__name'>
@@ -70,26 +70,20 @@ const Apart = () => {
                     <Collapse title="Description" arrow={arrow_close} text={apart.description} />
                     <Collapse title="Équipement" arrow={arrow_close} text={apart.equipments.map((equipement, index) => <li key={index}>{equipement}</li>)} />
 
-
                 </div>
 
-
-
             </div>
-
-
         );
     } else {
         return (
-            <div> LOADER loader loader</div>
+            <>
+                <div className='Apart__loader'></div>
+
+            </>
+
         )
-
-
     }
-
-
-}
-    ;
+};
 
 export default Apart;
 
