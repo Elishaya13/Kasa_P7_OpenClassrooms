@@ -1,18 +1,18 @@
-#Kasa est le dernier projet de la formation développeur Web chez OpenClassrooms.
+#titre Kasa est le dernier projet de la formation développeur Web chez OpenClassrooms.
 
 Projet build sur [vercel](https://kasa-p7-open-classrooms.vercel.app/)
 
 Utilisation de la librairie React.js  
 Utilisation de React router  
 
-##Compétences évaluées:
+##titre Compétences évaluées:
 
 *Initialiser une application avec Create React App  
 *Développer des éléments de l'interface d'un site web grâce à des composants React  
 *Configurer la navigation entre les pages de l'application avec React Router  
 
 
-##Contraintes techniques
+##titre Contraintes techniques
 
 React :
 Il est impératif d’utiliser ces éléments de React pour un code de qualité :
