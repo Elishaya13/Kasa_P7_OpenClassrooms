@@ -1,5 +1,6 @@
 
 @import '../../../styles/mixins';
+@import '../../../styles/variables';
 
 .error_container__body{
     
@@ -8,19 +9,15 @@
     align-items: center;
 
     &__message {
-
         text-align: center;
 
         &_number {
-           
             font-size: 96px;
             font-weight: 700;
             margin: 215px 0 11px 0;
-    
         }
 
         &_back {
-
             margin: 133px 0 235px 0  ;
             font-weight: 500;
             font-size: 14px;
@@ -31,13 +28,14 @@
         }
 
         &_oups {
-
             text-align: center;
             font-size: 18px;
             font-weight: 500;
         }
 
-        @include mediumMinBreakPoins {
+        // *** Responsive *** //
+
+        @include tabletMinBreakPoint {
 
             &_number {
                 font-size: 288px ;
@@ -56,36 +54,4 @@
         }
 
     }
-
-   
 }
-
-
-// .error_container {
-
-//     width: 375px;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-
-//     &__message {
-//         text-align: center;
-   
-   
-    
-//     &_number {
-       
-//         font-size: 6rem;
-//         font-weight: 700;
-//         margin: 215px 0 11px 0;
-//     }
-//     &_back {
-//         margin: 133px 0 235px 0  ;
-//         a {
-//             text-decoration: underline;
-//         }
-//     }
-
-
-
-// }

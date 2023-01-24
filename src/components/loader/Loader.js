@@ -4,7 +4,6 @@ import './loader.scss'
 const Loader = () => {
     return (
         <div className='Loader'></div>
-
     )
 };
 

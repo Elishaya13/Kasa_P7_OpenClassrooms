@@ -1,5 +1,5 @@
 @import '../../styles/mixins';
-
+@import '../../styles/variables';
 
 .Header {
        
@@ -12,13 +12,6 @@
         height: 47px;
         margin: 20px 0 17px 0px;
 
-        @include mediumMinBreakPoins {
-            margin: auto;
-            width: 1240px;
-            margin-top: 40px;
-            margin-bottom: 63px;
-        }
-        
         img {
             width: 145px;
             height: 47px;
@@ -28,27 +21,59 @@
             display: flex;  
             gap: 10px;
 
-            @include mediumMinBreakPoins {
-                gap: 34px;
-            }
-
-           
-
             li {
                 font-size: 12px;
                 font-weight: 500;
+            }  
+        }
 
-                @include mediumMinBreakPoins {
+        .active a{
+            text-decoration: underline;
+        }
+
+    }
+
+    // *** Responsive *** //
+
+    @include tabletMinBreakPoint {
+        width: $screen-tablet;
+
+        header {
+            margin: auto;
+            width: 700px;
+            margin-top: 40px;
+            margin-bottom: 63px;
+
+            ul {
+                gap: 34px;
+
+                li {
                     font-size: 24px;
                 }
+            }
+        }
             
-            }  
-        }    
-    }
-    
+    } 
+
+    @include laptopMinBreakPoint {
+        width: $screen-laptop;
+
+        header {
+            width: 900px;   
+        }
+           
+    }   
+    @include largeMinBreakPoint {
+        width: $screen-large;
+
+        header {
+            width: 1240px;   
+        }
+           
+    }   
+}
    
-}
-// ClassName for active link
-.active a{
-    text-decoration: underline;
-}
+    
+
+
+

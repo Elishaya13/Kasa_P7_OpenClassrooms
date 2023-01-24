@@ -2,39 +2,35 @@ import React from 'react';
 import Collapse from '../../../components/collapse/Collapse';
 import './aboutBody.scss'
 import arrow_close from '../../../assets/images/arrow_down.svg'
-
-
+import { ABOUT_TXT } from '../../../datas/constants';
 
 const AboutBody = () => {
+
     return (
         <div className='AboutBody'>
-
-
             <Collapse
                 arrow={arrow_close}
-                title="Fiabilité"
-                text="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes."
+                title={ABOUT_TXT.first.title}
+                text={ABOUT_TXT.first.text}
             />
 
             <Collapse
                 arrow={arrow_close}
-                title="Respect"
-                text="La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme."
+                title={ABOUT_TXT.second.title}
+                text={ABOUT_TXT.second.text}
             />
 
             <Collapse
                 arrow={arrow_close}
-                title="Service"
-                text="Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question."
+                title={ABOUT_TXT.third.title}
+                text={ABOUT_TXT.third.text}
             />
 
             <Collapse
                 arrow={arrow_close}
-                title="Sécurité"
-                text="La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes."
+                title={ABOUT_TXT.fourth.title}
+                text={ABOUT_TXT.fourth.text}
             />
-
-
         </div>
     );
 };

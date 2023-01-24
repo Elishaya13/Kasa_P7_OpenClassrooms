@@ -2,17 +2,13 @@ import React from 'react';
 import Banner from '../../components/banner/Banner';
 import AboutBody from './aboutBody/AboutBody';
 import './about.scss'
-import BANNER_ABOUT from '../../assets/images/banner_about.png';
-
-
+import { IMAGES } from '../../datas/constants';
 
 const About = () => {
     return (
         <div className='About'>
-
-            <Banner banner={BANNER_ABOUT} />
+            <Banner banner={IMAGES.BANNER_ABOUT} />
             <AboutBody />
-
         </div>
     );
 };

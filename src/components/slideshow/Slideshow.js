@@ -1,19 +1,21 @@
 import React, { useState } from 'react';
+import { IMAGES } from '../../datas/constants';
 import './slideshow.scss'
-import ARROW_BACK from '../../assets/images/arrow_back.png'
-import ARROW_FOREWARD from '../../assets/images/arrow_forward.png'
 
-const Slideshow = ({ pictures, alt }) => {
+
+const Slideshow = ({ pictures }) => {
 
     const [currentIndex, setIndex] = useState(0)
-    // Je prend le dernier index de mon tableau
+
+    // A get the last index 
     const lastIndex = pictures.length - 1;
 
     const handleClickSlideLeft = () => {
-        // Si je suis a index 0 , alors isFirstSlide = vrai , je suis sur la première slide
+
+        // If I'm at index 0 , then isFirstSlide = true , I'm on the first slide
         const isFirstSlide = currentIndex === 0;
 
-        // Si Je suis à la premiere slide, alors je vais à la dernière image de mon tableau , sinon je recule de 1
+        // If I am at the first slide, then I go to the last image of my array, otherwise I go back 1
         const newIndex = isFirstSlide ? lastIndex : currentIndex - 1;
         setIndex(newIndex)
 
@@ -23,21 +25,17 @@ const Slideshow = ({ pictures, alt }) => {
         const isLastSlide = currentIndex === lastIndex;
         const newIndex = isLastSlide ? 0 : currentIndex + 1;
         setIndex(newIndex);
-
     }
 
     return (
         <div className='Slideshow' style={{ backgroundImage: `url("${pictures[currentIndex]}")` }}>
 
-
             <div className='Slideshow__arrows'>
-                {pictures.length > 1 && <img className='arrow_back' src={ARROW_BACK} alt="flèche de défilement" onClick={handleClickSlideLeft}></img>}
-                {pictures.length > 1 && <img className='arrow_forward' src={ARROW_FOREWARD} alt="flèche de défilement" onClick={handleClickSlideRight}></img>}
+                {pictures.length > 1 && <img className='arrow_back' src={IMAGES.ARROW_BACK} alt="flèche de défilement" onClick={handleClickSlideLeft}></img>}
+                {pictures.length > 1 && <img className='arrow_forward' src={IMAGES.ARROW_FORWARD} alt="flèche de défilement" onClick={handleClickSlideRight}></img>}
             </div>
 
-            {<span>{currentIndex + 1}/{pictures.length}</span>}
-
-
+            {pictures.length > 1 && <span>{currentIndex + 1}/{pictures.length}</span>}
         </div>
     );
 };

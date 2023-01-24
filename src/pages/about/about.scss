@@ -1,22 +1,31 @@
 @import '../../styles/mixins';
+@import '../../styles/variables';
 
 .About {
-   max-width: 375px;
+   width: 375px;
    margin: auto;
    
-
-   @include mediumMinBreakPoins {
-    max-width: 1440px;
-   }
    .Banner {
-
-    img {
+        img {
      
-        height: 223px;
-        object-fit: cover;
-       }
+            height: 223px;
+            object-fit: cover;
+        }
    }
    
+   // *** Responsive *** //
+
+   @include tabletMinBreakPoint {
+    width: $screen-tablet;
+   }
+
+   @include laptopMinBreakPoint {
+    width: $screen-laptop;
+   }
+
+   @include largeMinBreakPoint {
+    width: $screen-large;
+   }
    
 
 }

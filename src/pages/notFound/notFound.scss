@@ -1,14 +1,21 @@
 @import '../../styles/mixins';
+@import '../../styles/variables';
 
 .error_container {
-
     max-width: 375px;
-   margin: auto;
+    margin: auto;
 
-   @include mediumMinBreakPoins {
-    max-width: 1440px;
-   }
+    // *** Responsive ***//
 
+    @include tabletMinBreakPoint {
+    max-width: $screen-tablet;
+    }
 
-   
+    @include laptopMinBreakPoint {
+    max-width: $screen-laptop;
+    }
+    
+    @include largeMinBreakPoint {
+    max-width: $screen-large;
+    }
 }

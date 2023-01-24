@@ -14,37 +14,61 @@
         height: 111px;
         border-radius: $border-radius;
         filter: brightness(65%);
-
-        @include mediumMinBreakPoins {
-            width: 1240px;
-            height: 223px;
-            border-radius: $border-radius-md;
-        }
-
+       
     }
+
     h1 {
 
         position: absolute;
         color:$secondary-color;
         left: 10%;
-        
-
-        @include mediumMinBreakPoins {
-            margin: auto;
-            padding: 0;
-        }
-       
-
-
-         br {
-
-            @include mediumMinBreakPoins {
-                display: none;
-            }
-
-        }
-
+        width: 60%;
        
     }
+
+    // *** Responsive *** //
+
+    @include tabletMinBreakPoint {
+
+        width: $screen-tablet;
+
+        img {
+            width: 700px;
+            height: 223px;
+            border-radius: $border-radius-md;
+        }
+
+        h1 {
+
+            margin: auto;
+            padding: 0;
+            left: auto;
+            width: auto;
+
+            br {
+                display: none;
+            }
+        }
+    }
+
+    @include laptopMinBreakPoint {
+
+        width: $screen-laptop;
+
+        img {
+            width: 900px;
+        }
+    }
+
+    @include largeMinBreakPoint {
+
+        width: $screen-large;
+        
+        img {
+            width: 1240px;
+        }
+       
+    }
+
  
 }

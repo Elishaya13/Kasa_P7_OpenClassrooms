@@ -1,20 +1,18 @@
 import React from 'react';
 import './rating.scss'
-import starsNumber from './starsNumber';
-import redStarImg from './../../assets/images/redStar.png'
-import greyStarImg from './../../assets/images/greyStar.png'
-
+import { IMAGES } from '../../datas/constants';
+// import starsNumber from './starsNumber';
 
 const Rating = ({ rating }) => {
 
     let maxRate = 5;
     let stars = [];
 
-    // Pour chacune des étoiles
+    // For each star
     for (let i = 1; i <= maxRate; i++) {
-        // On compare avec la note reçue, image rouge si elle est inférieur ou égale à la note sinon grise
-        let starImg = i <= rating ? redStarImg : greyStarImg
-        // On pousse dans un tableau la ligne à afficher avec la bonne image
+        // We compare with the note received, red image if it is less than or equal to the note otherwise gray
+        let starImg = i <= rating ? IMAGES.RED_STAR_IMG : IMAGES.GREY_STAR_IMG
+        // We push on the stars array the code to write with the good star img
         stars.push(<li key={i}><img src={starImg} alt="star icone"></img></li>)
     }
 
@@ -30,14 +28,7 @@ const Rating = ({ rating }) => {
             {rating == 5 && starsNumber.FiveStars()} */}
 
             </div>
-
         </div>
     )
-
 }
-
-
-
-
-
 export default Rating;

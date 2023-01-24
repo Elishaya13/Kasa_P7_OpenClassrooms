@@ -24,11 +24,16 @@
     &__arrows {
         display: flex;
         justify-content: space-between;
+        padding-top: 3%;
+       
 
     }
-    @include mediumMinBreakPoins {
 
-        width: 1240px;
+    // *** Responsive *** //
+
+    @include tabletMinBreakPoint {
+
+        width: 700px;
         height: 415px;
         border-radius: $border-radius-md;
         background-position-x: center;
@@ -48,4 +53,10 @@
             }
         
        }
+    @include laptopMinBreakPoint {
+        width: 960px
+    }   
+    @include largeMinBreakPoint {
+        width: 1240px
+    }   
 }

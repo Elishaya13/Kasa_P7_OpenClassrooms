@@ -2,20 +2,12 @@ import React from 'react';
 import { useState } from 'react';
 import './collapse.scss'
 
-
-
 const Collapse = ({ title, arrow, text }) => {
 
     const [open, setOpen] = useState(false);
 
-    // useEffect(() => {
-    //     console.log("je suis " + open)
-
-    // }, [open])
-
     const handleClick = () => {
         setOpen(!open)
-
     }
 
     return (

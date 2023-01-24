@@ -2,8 +2,6 @@ import React from 'react';
 import NotFoundBody from './notFoundBody/NotFoundBody';
 import './notFound.scss';
 
-
-
 const NotFound = () => {
     return (
         <div className='error_container'>
