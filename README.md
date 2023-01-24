@@ -1,4 +1,7 @@
-# Kasa est le dernier projet de la formation développeur Web chez OpenClassrooms.
+# Projet Kasa
+
+Kasa est le dernier projet de la formation développeur Web chez OpenClassrooms.
+
 
 Projet build sur [vercel](https://kasa-p7-open-classrooms.vercel.app/)
 
