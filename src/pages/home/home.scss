@@ -2,8 +2,12 @@
 @import '../../styles/variables';
 
 .Home {
-   width: 375px;
-   margin: auto;
+   // width: 375px;
+    margin: auto;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
 
    // *** Responsive *** //
 
