@@ -4,6 +4,7 @@ import AboutBody from './aboutBody/AboutBody';
 import './about.scss'
 import { IMAGES } from '../../datas/constants';
 
+
 const About = () => {
     return (
         <div className='About'>
