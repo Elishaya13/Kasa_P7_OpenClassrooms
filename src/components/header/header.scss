@@ -1,79 +1,70 @@
-@import '../../styles/mixins';
-@import '../../styles/variables';
+@import "../../styles/mixins";
+@import "../../styles/variables";
 
 .Header {
-       
-    header {
-        
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 335px;
-        height: 47px;
-        margin: 20px 0 17px 0px;
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 335px;
+    height: 47px;
+    margin: 20px 0 17px 0px;
 
-        img {
-            width: 145px;
-            height: 47px;
-        }
-       
-        ul {
-            display: flex;  
-            gap: 10px;
-
-            li {
-                font-size: 12px;
-                font-weight: 500;
-            }  
-        }
-
-        .active a{
-            text-decoration: underline;
-        }
-
+    img {
+      width: 145px;
+      height: 47px;
     }
 
-    // *** Responsive *** //
+    ul {
+      display: flex;
+      gap: 10px;
 
-    @include tabletMinBreakPoint {
-        width: $screen-tablet;
+      li {
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+    }
 
-        header {
-            margin: auto;
-            width: 700px;
-            margin-top: 40px;
-            margin-bottom: 63px;
+    .active a {
+      text-decoration: underline;
+    }
+  }
 
-            ul {
-                gap: 34px;
+  // *** Responsive *** //
 
-                li {
-                    font-size: 24px;
-                }
-            }
+  @include tabletMinBreakPoint {
+    width: $screen-tablet;
+
+    header {
+      margin: auto;
+      width: 700px;
+      margin-top: 40px;
+      margin-bottom: 63px;
+
+      ul {
+        gap: 34px;
+
+        li {
+          font-size: 24px;
+          text-transform: capitalize;
         }
-            
-    } 
+      }
+    }
+  }
 
-    @include laptopMinBreakPoint {
-        width: $screen-laptop;
+  @include laptopMinBreakPoint {
+    width: $screen-laptop;
 
-        header {
-            width: 900px;   
-        }
-           
-    }   
-    @include largeMinBreakPoint {
-        width: $screen-large;
+    header {
+      width: 900px;
+    }
+  }
+  @include largeMinBreakPoint {
+    width: $screen-large;
 
-        header {
-            width: 1240px;   
-        }
-           
-    }   
+    header {
+      width: 1240px;
+    }
+  }
 }
-   
-    
-
-
-
