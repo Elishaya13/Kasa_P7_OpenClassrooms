@@ -1,23 +1,19 @@
-@import './variables';
+@import "./variables";
 
 //Breakpoints
-@mixin mediumMinBreakPoint {
-    @media (min-width : #{$screen-medium}) {
-        @content;
-    }
-}
+
 @mixin tabletMinBreakPoint {
-    @media (min-width : #{$screen-tablet}) {
-        @content;
-    }
+  @media (min-width : #{$screen-tablet}) {
+    @content;
+  }
 }
 @mixin laptopMinBreakPoint {
-    @media (min-width : #{$screen-laptop}) {
-        @content;
-    }
+  @media (min-width : #{$screen-laptop}) {
+    @content;
+  }
 }
 @mixin largeMinBreakPoint {
-    @media (min-width : #{$screen-large}) {
-        @content;
-    }
+  @media (min-width : #{$screen-large}) {
+    @content;
+  }
 }

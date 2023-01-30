@@ -2,7 +2,7 @@ import React from 'react';
 import Collapse from '../../../components/collapse/Collapse';
 import './aboutBody.scss'
 import arrow_close from '../../../assets/images/arrow_down.svg'
-import { ABOUT_TXT } from '../../../datas/constants';
+import { ABOUT_TXT } from '../../../strings/constants';
 
 const AboutBody = () => {
 

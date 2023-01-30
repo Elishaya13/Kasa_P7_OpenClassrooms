@@ -1,17 +1,25 @@
 const apiAparts = () => {
 
-    // Return the data from Json
+    /**
+     * Get the data from the Json
+     * @returns {Promise}
+     */
     const getAparts = async () => {
         return fetch("/datas/logements.json", {
             type: "GET",
         }).then((res) => res.json());
     };
 
-    // Get the data from the Json and return the data from one apart with the id, or false if response is not ok.
+    /**
+     *  Get the data from the Json and return the data from one apart with the id, or error is not ok.
+     * @param {string} apartId 
+     * @returns {Promise} Promise object represents the data for one apart from the json
+     */
     const getApart = async (apartId) => {
         let aparts = await getAparts();
         let res = await aparts.find(apart => apart.id === apartId);
-        return res ? res : false
+        if (!res) throw new Error ('pas d appart')
+        return res
     }
 
     return {
@@ -19,16 +27,3 @@ const apiAparts = () => {
     };
 }
 export default apiAparts();
-
-// const getApart = async (apartId) => {
-
-    //     return new Promise((resolve, reject) => {
-    //         getAparts()
-    //             .then((res) => {
-    //                 resolve(res.find(apart =>
-    //                     apart.id === apartId))
-    //             }).catch(e => { console.log(e); reject(e) })
-
-    //     })
-
-    // }

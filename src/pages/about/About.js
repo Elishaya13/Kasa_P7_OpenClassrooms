@@ -2,7 +2,7 @@ import React from 'react';
 import Banner from '../../components/banner/Banner';
 import AboutBody from './aboutBody/AboutBody';
 import './about.scss'
-import { IMAGES } from '../../datas/constants';
+import { IMAGES} from '../../assets/images/images';
 
 
 const About = () => {

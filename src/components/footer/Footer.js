@@ -1,6 +1,7 @@
 import React from 'react';
 import './footer.scss'
-import { IMAGES, STRINGS } from '../../datas/constants';
+import { STRINGS } from '../../strings/constants';
+import { IMAGES} from '../../assets/images/images';
 
 const Footer = () => {
     return (

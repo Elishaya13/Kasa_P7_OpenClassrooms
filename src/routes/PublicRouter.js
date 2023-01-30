@@ -19,7 +19,7 @@ const PublicRouter = () => {
                 <Route path='/about' element={<About />} />
                 <Route path='/logements/:apartId' element={<Apart />}
                 />
-
+                <Route path='/error' element={<NotFound />} />
                 <Route path='*' element={<NotFound />} />
             </Route>
         </Routes>

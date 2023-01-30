@@ -3,7 +3,8 @@ import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 import './header.scss'
-import { IMAGES, STRINGS } from '../../datas/constants';
+import {  STRINGS } from '../../datas/constants';
+import { IMAGES} from '../../assets/images/images';
 
 
 const Header = () => {

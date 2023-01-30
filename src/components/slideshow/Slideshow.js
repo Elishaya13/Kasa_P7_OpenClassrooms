@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { IMAGES } from '../../datas/constants';
+import { IMAGES} from '../../assets/images/images';
 import './slideshow.scss'
 
 

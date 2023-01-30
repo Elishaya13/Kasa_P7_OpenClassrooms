@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Navigate } from 'react-router-dom';
 import apiAparts from '../../services/apiAparts';
 
 import './apart.scss'
@@ -11,13 +11,13 @@ import TagLocation from '../../components/tagLocation/TagLocation';
 import Rating from '../../components/rating/Rating';
 import Collapse from '../../components/collapse/Collapse';
 import Loader from '../../components/loader/Loader';
-import NotFound from '../notFound/NotFound';
 
 
 const Apart = () => {
 
     const { apartId } = useParams();
     const [apart, setApart] = useState(null);
+    const [error, setError] = useState(null);
 
     useEffect(() => {
 
@@ -25,7 +25,7 @@ const Apart = () => {
             .then((json) => {
                 setApart(json);
             })
-            .catch(e => console.log(e));
+            .catch(e => setError(e));
 
     }, [apartId]);
 
@@ -75,9 +75,9 @@ const Apart = () => {
 
             </div>
         );
-    } else if (apart === false) {
+    } else if (error) {
         return (
-            <NotFound />
+            <Navigate to="/error"/>
         )
     }
     else {
