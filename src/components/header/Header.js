@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 import './header.scss'
-import {  STRINGS } from '../../datas/constants';
+import {  STRINGS } from '../../strings/constants';
 import { IMAGES} from '../../assets/images/images';
 
 
