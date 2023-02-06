@@ -5,7 +5,7 @@ import { IMAGES} from '../../assets/images/images';
 
 const Footer = () => {
     return (
-        <div className='Footer'>
+        <div className='footer'>
             <img src={IMAGES.BLACK_LOGO} alt="black logo"></img>
             <p>{STRINGS.COPYRIGHT}</p>
         </div>

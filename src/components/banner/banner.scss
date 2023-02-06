@@ -1,74 +1,63 @@
-@import '../../styles/variables';
-@import '../../styles/mixins';
+@import "../../styles/variables";
+@import "../../styles/mixins";
 
-.Banner {
+.banner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 335px;
+    height: 111px;
+    border-radius: $border-radius;
+    filter: brightness(65%);
+  }
+
+  h1 {
+    position: absolute;
+    color: $secondary-color;
+    left: 10%;
+    width: 65%;
+  }
+
+  // *** Responsive *** //
+
+  @include tabletMinBreakPoint {
+    width: $screen-tablet;
 
     img {
-        
-        position: relative;
-        width: 335px;
-        height: 111px;
-        border-radius: $border-radius;
-        filter: brightness(65%);
-       
+      width: 700px;
+      height: 223px;
+      border-radius: $border-radius-md;
     }
 
     h1 {
+      margin: auto;
+      padding: 0;
+      left: auto;
+      width: auto;
 
-        position: absolute;
-        color:$secondary-color;
-        left: 10%;
-        width: 65%;
-       
+      br {
+        display: none;
+      }
     }
+  }
 
-    // *** Responsive *** //
+  @include laptopMinBreakPoint {
+    width: $screen-laptop;
 
-    @include tabletMinBreakPoint {
-
-        width: $screen-tablet;
-
-        img {
-            width: 700px;
-            height: 223px;
-            border-radius: $border-radius-md;
-        }
-
-        h1 {
-
-            margin: auto;
-            padding: 0;
-            left: auto;
-            width: auto;
-
-            br {
-                display: none;
-            }
-        }
+    img {
+      width: 900px;
     }
+  }
 
-    @include laptopMinBreakPoint {
+  @include largeMinBreakPoint {
+    width: $screen-large;
 
-        width: $screen-laptop;
-
-        img {
-            width: 900px;
-        }
+    img {
+      width: 1240px;
     }
-
-    @include largeMinBreakPoint {
-
-        width: $screen-large;
-        
-        img {
-            width: 1240px;
-        }
-       
-    }
-
- 
+  }
 }

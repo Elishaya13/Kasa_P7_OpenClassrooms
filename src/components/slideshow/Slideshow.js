@@ -28,9 +28,9 @@ const Slideshow = ({ pictures }) => {
     }
 
     return (
-        <div className='Slideshow' style={{ backgroundImage: `url("${pictures[currentIndex]}")` }}>
+        <div className='slideshow' style={{ backgroundImage: `url("${pictures[currentIndex]}")` }}>
 
-            <div className='Slideshow__arrows'>
+            <div className='slideshow__arrows'>
                 {pictures.length > 1 && <img className='arrow_back' src={IMAGES.ARROW_BACK} alt="flèche de défilement" onClick={handleClickSlideLeft}></img>}
                 {pictures.length > 1 && <img className='arrow_forward' src={IMAGES.ARROW_FORWARD} alt="flèche de défilement" onClick={handleClickSlideRight}></img>}
             </div>

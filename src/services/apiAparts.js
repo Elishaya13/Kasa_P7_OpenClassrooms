@@ -13,7 +13,7 @@ const apiAparts = () => {
     /**
      *  Get the data from the Json and return the data from one apart with the id, or error is not ok.
      * @param {string} apartId 
-     * @returns {Promise} Promise object represents the data for one apart from the json
+     * @returns {object}  object represents the data for one apart from the json
      */
     const getApart = async (apartId) => {
         let aparts = await getAparts();

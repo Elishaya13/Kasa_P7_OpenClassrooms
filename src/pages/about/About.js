@@ -7,7 +7,7 @@ import { IMAGES} from '../../assets/images/images';
 
 const About = () => {
     return (
-        <div className='About'>
+        <div className='about'>
             <Banner banner={IMAGES.BANNER_ABOUT} />
             <AboutBody />
         </div>

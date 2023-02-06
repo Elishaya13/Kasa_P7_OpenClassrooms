@@ -4,7 +4,7 @@ import './tagLocation.scss'
 const TagLocation = ({ tags }) => {
 
     return (
-        <div className='TagLocation'>
+        <div className='tagLocation'>
 
             <p>{tags}</p>
         </div>

@@ -5,9 +5,9 @@ import { IMAGES} from '../../assets/images/images';
 
 const Rating = ({ rating }) => {
 
-    let maxRate = 5;
+    //let maxRate = 5;
     const [stars , setStars] = useState([])
-    // const [maxRate , setMaxRate] = useState(5)
+    const [maxRate] = useState(5)
 
   useEffect(() => {
         let tmpArray = [];
@@ -27,8 +27,8 @@ const Rating = ({ rating }) => {
   
     return (
 
-        <div className='Rating'>
-            <div className='Rating__stars'>
+        <div className='rating'>
+            <div className='rating__stars'>
                 {stars}
             </div>
         </div>

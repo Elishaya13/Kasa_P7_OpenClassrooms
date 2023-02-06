@@ -17,8 +17,8 @@ const Gallery = () => {
     }, [isMounted]);
 
     return (
-        <div className='Gallery'>
-            <div className='Gallery__content'>
+        <div className='gallery'>
+            <div className='gallery__content'>
                 {aparts && aparts.map(apart => (
                     <Card key={apart.id}
                         {...apart}

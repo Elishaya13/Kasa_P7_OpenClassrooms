@@ -1,24 +1,23 @@
-@import '../../styles/mixins';
-@import '../../styles/variables';
+@import "../../styles/mixins";
+@import "../../styles/variables";
 
-.Home {
-   // width: 375px;
-    margin: auto;
-   width: 100%;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
+.home {
+  // width: 375px;
+  margin: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-   // *** Responsive *** //
+  // *** Responsive *** //
 
-   @include tabletMinBreakPoint {
+  @include tabletMinBreakPoint {
     width: $screen-tablet;
-   }
-   @include laptopMinBreakPoint {
+  }
+  @include laptopMinBreakPoint {
     width: $screen-laptop;
-   }
-   @include largeMinBreakPoint {
+  }
+  @include largeMinBreakPoint {
     width: $screen-large;
-   }
-
+  }
 }

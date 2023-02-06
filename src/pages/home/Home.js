@@ -9,7 +9,7 @@ import { IMAGES } from '../../assets/images/images';
 const Home = () => {
 
     return (
-        <div className='Home'>
+        <div className='home'>
             <Banner banner={IMAGES.BANNER_HOME} text={STRINGS.BANNER_TITLE} />
             <Gallery />
         </div>

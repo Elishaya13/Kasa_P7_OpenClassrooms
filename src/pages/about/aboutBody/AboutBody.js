@@ -7,7 +7,7 @@ import { ABOUT_TXT } from '../../../strings/constants';
 const AboutBody = () => {
 
     return (
-        <div className='AboutBody'>
+        <div className='aboutBody'>
             <Collapse
                 arrow={arrow_close}
                 title={ABOUT_TXT.first.title}

@@ -1,34 +1,31 @@
-@import '../../styles/mixins';
-@import '../../styles/variables';
+@import "../../styles/mixins";
+@import "../../styles/variables";
 
-.About {
-   width: 100%;
-   margin: auto;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   
-   .Banner {
-        img {
-     
-            height: 223px;
-            object-fit: cover;
-        }
-   }
-   
-   // *** Responsive *** //
+.about {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-   @include tabletMinBreakPoint {
+  .banner {
+    img {
+      height: 223px;
+      object-fit: cover;
+    }
+  }
+
+  // *** Responsive *** //
+
+  @include tabletMinBreakPoint {
     width: $screen-tablet;
-   }
+  }
 
-   @include laptopMinBreakPoint {
+  @include laptopMinBreakPoint {
     width: $screen-laptop;
-   }
+  }
 
-   @include largeMinBreakPoint {
+  @include largeMinBreakPoint {
     width: $screen-large;
-   }
-   
-
+  }
 }

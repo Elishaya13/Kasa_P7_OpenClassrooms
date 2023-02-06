@@ -1,28 +1,26 @@
-@import '../../../styles/mixins';
-@import '../../../styles/variables';
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
 
-.AboutBody {
-    
-    width: 375px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin: 20px 0 20px 0;
+.aboutBody {
+  width: 375px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0 20px 0;
 
-    // *** Responsive *** //
+  // *** Responsive *** //
 
-    @include tabletMinBreakPoint {
-        width: $screen-tablet;           
-    }
+  @include tabletMinBreakPoint {
+    width: $screen-tablet;
+  }
 
-    @include laptopMinBreakPoint {
-        width: $screen-laptop;
-        gap: 30px;  
-    }
-    
-    @include largeMinBreakPoint {
-        width: $screen-large;
-        
-    }
+  @include laptopMinBreakPoint {
+    width: $screen-laptop;
+    gap: 30px;
+  }
+
+  @include largeMinBreakPoint {
+    width: $screen-large;
+  }
 }

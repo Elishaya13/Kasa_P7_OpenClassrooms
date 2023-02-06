@@ -18,7 +18,7 @@ const Header = () => {
     const splitLocation = pathname.split("/");
 
     return (
-        <div className='Header'>
+        <div className='header'>
             <header>
 
                 <Link to='/home'>

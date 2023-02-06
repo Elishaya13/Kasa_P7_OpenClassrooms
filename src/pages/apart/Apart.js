@@ -34,40 +34,40 @@ const Apart = () => {
     if (apart) {
 
         return (
-            <div className='Apart'>
+            <div className='apart'>
 
-                <div className='Apart__slideshow'>
+                <div className='apart__slideshow'>
                     <Slideshow pictures={apart.pictures} alt={apart.description} />
                 </div>
 
-                <div className='Apart__profil'>
+                <div className='apart__profil'>
 
-                    <div className='Apart__profil__name'>
+                    <div className='apart__profil__name'>
 
-                        <div className='Apart__profil__name__title'>
+                        <div className='apart__profil__name__title'>
                             <h2>{apart.title}</h2>
                             <p>{apart.location}</p>
                         </div>
 
-                        <div className='Apart__profil__name__tags'>
+                        <div className='apart__profil__name__tags'>
                             {apart.tags.map((item, index) =>
                                 (<TagLocation key={index} tags={item} />))
                             }
                         </div>
                     </div>
 
-                    <div className='Apart__profil__host'>
+                    <div className='apart__profil__host'>
 
                         <Rating rating={apart.rating} />
 
-                        <div className='Apart__profil__host__hoster'>
+                        <div className='apart__profil__host__hoster'>
                             <p>{apart.host["name"]} </p>
                             <img src={apart.host["picture"]} alt={"proprietaire"}></img>
                         </div>
                     </div>
                 </div>
 
-                <div className='Apart__collapse'>
+                <div className='apart__collapse'>
 
                     <Collapse title="Description" arrow={arrow_close} text={apart.description} />
                     <Collapse title="Équipement" arrow={arrow_close} text={apart.equipments.map((equipement, index) => <li key={index}>{equipement}</li>)} />
