@@ -37,6 +37,6 @@
   }
 
   @include largeMinBreakPoint {
-    width: $screen-large;
+    width: 100%;
   }
 }
