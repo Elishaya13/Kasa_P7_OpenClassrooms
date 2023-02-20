@@ -7,7 +7,7 @@ Projet build et hebergé sur [vercel](https://kasa-p7-open-classrooms.vercel.app
 Utilisation de la librairie React.js  
 Utilisation de React router
 
-np## Compétences évaluées:
+## Compétences évaluées:
 
 - Initialiser une application avec Create React App
 - Développer des éléments de l'interface d'un site web grâce à des composants React
@@ -65,8 +65,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ## Note
 
 Pour faire fonctionner correctement le site sur un serveur apache il faut ajouter un fichier .htaccess à la racine.
-
-<IfModule mod_rewrite.c>
+`<IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
   RewriteRule ^index\.html$ - [L]
@@ -74,4 +73,4 @@ Pour faire fonctionner correctement le site sur un serveur apache il faut ajoute
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME} !-l
   RewriteRule . /index.html [L]
-</IfModule>
+</IfModule>`
