@@ -2,7 +2,7 @@
 
 Kasa est le dernier projet de la formation développeur Web chez OpenClassrooms.
 
-Projet build et hebergé sur [vercel](https://kasa-p7-open-classrooms.vercel.app/) et aussi hebergé sur serveur (https://kasa.angiepons.fr/)
+Projet build et hebergé sur [vercel](https://kasa-p7-open-classrooms.vercel.app/) et aussi hebergé sur [serveur](https://kasa.angiepons.fr/)
 
 Utilisation de la librairie React.js  
 Utilisation de React router
