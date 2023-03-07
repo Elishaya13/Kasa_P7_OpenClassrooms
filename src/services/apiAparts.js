@@ -18,7 +18,7 @@ const apiAparts = () => {
     const getApart = async (apartId) => {
         let aparts = await getAparts();
         let res = await aparts.find(apart => apart.id === apartId);
-        if (!res) throw new Error ('pas d appart')
+        if (!res) throw new Error ('pas d\' appart')
         return res
     }
 

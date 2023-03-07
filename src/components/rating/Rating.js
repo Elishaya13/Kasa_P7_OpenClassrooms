@@ -5,7 +5,6 @@ import { IMAGES} from '../../assets/images/images';
 
 const Rating = ({ rating }) => {
 
-    //let maxRate = 5;
     const [stars , setStars] = useState([])
     const [maxRate] = useState(5)
 
