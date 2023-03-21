@@ -5,16 +5,15 @@ import './gallery.scss'
 
 const Gallery = () => {
     const [aparts, setAparts] = useState([]);
-    const [isMounted, setIsMounted] = useState(false);
+    const [isData, setIsData] = useState(false);
 
     useEffect(() => {
-        !isMounted &&
-
+        !isData &&
             apiAparts.getAparts().then((json) => {
                 setAparts(json);
-                setIsMounted(true);
+                setIsData(true);
             });
-    }, [isMounted]);
+    }, [isData]);
 
     return (
         <div className='gallery'>

@@ -2,7 +2,7 @@
 @import "../../styles/variables";
 
 .header {
-  header {
+  div {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,7 +36,7 @@
   @include tabletMinBreakPoint {
     width: $screen-tablet;
 
-    header {
+    div {
       margin: auto;
       width: 700px;
       margin-top: 40px;
@@ -56,14 +56,14 @@
   @include laptopMinBreakPoint {
     width: $screen-laptop;
 
-    header {
+    div {
       width: 900px;
     }
   }
   @include largeMinBreakPoint {
     width: $screen-large;
 
-    header {
+    div {
       width: 1240px;
     }
   }

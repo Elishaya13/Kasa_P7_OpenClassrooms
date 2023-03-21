@@ -6,13 +6,10 @@ import PublicRouter from './routes/PublicRouter';
 function App() {
   return (
     <div className="App">
-
       <BrowserRouter>
         <PublicRouter />
       </BrowserRouter>
-
     </div>
   );
 }
-
 export default App;

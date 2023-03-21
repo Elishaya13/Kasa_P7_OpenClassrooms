@@ -1,15 +1,15 @@
-import React from 'react';
-import './footer.scss'
-import { STRINGS } from '../../strings/constants';
-import { IMAGES} from '../../assets/images/images';
+import React from "react";
+import "./footer.scss";
+import { STRINGS } from "../../strings/constants";
+import { IMAGES } from "../../assets/images/images";
 
 const Footer = () => {
-    return (
-        <div className='footer'>
-            <img src={IMAGES.BLACK_LOGO} alt="black logo"></img>
-            <p>{STRINGS.COPYRIGHT}</p>
-        </div>
-    );
+  return (
+    <footer className="footer">
+      <img src={IMAGES.BLACK_LOGO} alt="black logo"></img>
+      <p>{STRINGS.COPYRIGHT}</p>
+    </footer>
+  );
 };
 
 export default Footer;

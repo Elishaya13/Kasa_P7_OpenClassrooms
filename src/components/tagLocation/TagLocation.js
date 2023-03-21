@@ -1,14 +1,12 @@
-import React from 'react';
-import './tagLocation.scss'
+import React from "react";
+import "./tagLocation.scss";
 
 const TagLocation = ({ tags }) => {
-
-    return (
-        <div className='tagLocation'>
-
-            <p>{tags}</p>
-        </div>
-    );
+  return (
+    <div className="tagLocation">
+      <p>{tags}</p>
+    </div>
+  );
 };
 
 export default TagLocation;

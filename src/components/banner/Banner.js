@@ -1,13 +1,13 @@
-import React from 'react';
-import './banner.scss'
+import React from "react";
+import "./banner.scss";
 
 const Banner = ({ banner, text }) => {
-    return (
-        <div className='banner'>
-            <img src={banner} alt="banner"></img>
-            <h1>{text}</h1>
-        </div>
-    );
+  return (
+    <div className="banner">
+      <img src={banner} alt="banner"></img>
+      <h1>{text}</h1>
+    </div>
+  );
 };
 
 export default Banner;
